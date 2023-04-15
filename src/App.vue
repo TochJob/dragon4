@@ -17,6 +17,7 @@ export default {
 </script>
 
 <style>
+@import '@/assets/css/fonts.scss';
 * {
   margin: 0%;
   padding: 0%;
