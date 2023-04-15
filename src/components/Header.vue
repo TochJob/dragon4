@@ -55,7 +55,8 @@ export default {
         align-items: center;
         display: flex;
         gap: 27px;
-
+        text-align: center;
+        
 
         .button {
             font-family: 'Arial';
