@@ -18,8 +18,6 @@ export default {
   text-align: center;
 
   &__heading {
-    font-family: "Raleway";
-    font-style: normal;
     font-weight: 700;
     font-size: 40px;
     line-height: 47px;
@@ -28,9 +26,8 @@ export default {
   }
 
   &__paragraph {
-    font-family: "Raleway";
-    font-style: normal;
     font-weight: 300;
+    max-width: 55%;
     font-size: 15px;
     line-height: 22px;
     color: #ffffff;

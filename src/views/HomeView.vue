@@ -10,19 +10,16 @@
       <h2 class="section__name">Игры</h2>
       <Games />
     </div>
-    <Footer/>
   </section>
 </template>
 
 <script>
 import Games from '@/components/Games.vue';
-import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'HomeLand',
   components: {
     Games,
-    Footer
   },
   data() {
     return {
@@ -46,14 +43,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .section {
-  background: #151B3D;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
   &__heading {
-    font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -63,7 +59,6 @@ export default {
   }
 
   &__paragraph {
-    font-family: 'Raleway';
     font-style: normal;
     font-weight: 300;
     font-size: 15px;

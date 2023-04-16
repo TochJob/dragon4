@@ -11,10 +11,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .footer {
-    margin: 35px 0;
+    padding: 35px 0;
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #ffffff8c;
     &__text {
-        font-family: 'Raleway';
-        font-style: normal;
         font-weight: 300;
         font-size: 12px;
         line-height: 14px;
