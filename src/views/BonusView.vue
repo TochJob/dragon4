@@ -59,7 +59,7 @@
       />
     </div>
     <h2 class="bonus__title">Реферальный бонус</h2>
-    <BReferal/>
+    <BReferal />
   </section>
 </template>
 <script>
@@ -79,8 +79,8 @@ export default {
     BAttention,
     BWeekly,
     BEvent,
-    BReferal
-},
+    BReferal,
+  },
   data() {
     return {
       infoList: [
@@ -201,7 +201,7 @@ export default {
     line-height: 37px;
     color: #ffffff;
   }
-  &__reg{
+  &__reg {
     display: inline-block;
     margin: 40px 0;
   }
@@ -230,7 +230,7 @@ export default {
       width: 100%;
     }
   }
-  &__events{
+  &__events {
     gap: 40px;
     align-self: flex-start;
     margin: 40px 0;
@@ -263,6 +263,25 @@ export default {
     line-height: 30px;
     color: #ffffff;
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .chapter {
+    &__image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .bonus{
+    &__events{
+      flex-direction: column;
+    }
+    &__text{
+      font-size: 13px;
+      line-height: 240%;
+    }
   }
 }
 </style>

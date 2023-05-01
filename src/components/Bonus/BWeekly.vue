@@ -77,4 +77,36 @@ export default { components: { AutorisationButton } };
     padding: 0 30px;
   }
 }
+
+
+@media screen and (max-width:992px) {
+  .weekly{
+    padding: 25px 30px 25px 20px;
+    background-position: top 30px right 50px ;
+    background-size: 10%;
+
+    &__total{
+      &-text{
+        font-size: 30px;
+      }
+      img{
+        width: 30px;
+      }
+    }
+  }
+  
+}
+@media screen and (max-width:768px) {
+  .weekly{
+    flex-direction: column;
+    align-items: flex-start;
+    &__main{
+      margin-bottom: 15px;
+    }
+    &__text{
+      font-size: 13px;
+    }
+    
+  }
+}
 </style>

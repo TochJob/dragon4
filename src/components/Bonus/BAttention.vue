@@ -55,4 +55,27 @@ export default {
     color: #ffffff;
   }
 }
+
+
+@media screen and (max-width:992px) {
+  .attention{
+    &__title{
+      font-size: 11px;
+      line-height: auto;
+    }
+    &__item{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img{
+        width: 80%;
+      }
+      a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
 </style>

@@ -18,7 +18,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss"> 
 @import "@/assets/css/fonts.scss";
 * {
   margin: 0%;
@@ -33,6 +33,13 @@ export default {
 .button {
   cursor: pointer;
   text-decoration: none;
+  
+}
+a{
+  transition: all .3s;
+  &:hover{
+    opacity: .8; 
+  }
 }
 .column{
   display: flex;
@@ -49,7 +56,14 @@ footer {
 @media (min-width: 319.98px) {
   section,
   footer {
-    padding: 0 calc(50vw - 180px);
+    padding: 0 calc(50vw - 140px);
+  }
+}
+
+@media (min-width: 479.98px) {
+  section,
+  footer {
+    padding: 0 calc(50vw - 225px);
   }
 }
 

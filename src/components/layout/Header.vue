@@ -2,16 +2,11 @@
   <header class="header">
     <a class="header__link" href="">Dragon Money</a>
     <div class="header__buttons">
-      <router-link 
-        :to="item.to"
-        class="button"
-        v-for="(item, index) of headerButtons"
-        :key="index"
-      >
+      <router-link :to="item.to" class="button" v-for="(item, index) of headerButtons" :key="index">
         {{ item.name }}
       </router-link>
     </div>
-    <div class=""></div>
+    <div class="hide"></div>
   </header>
 </template>
 <script>
@@ -56,7 +51,6 @@ export default {
   }
 
   &__buttons {
-    display: flex;
     align-items: center;
     display: flex;
     gap: 27px;
@@ -71,8 +65,42 @@ export default {
       padding: 0 20px;
       background: none;
       border: none;
-      
     }
   }
 }
+
+@media screen and (max-width: 576px) {
+  .header {
+    &__link{
+      font-size: 15px;
+    }
+    .hide{
+      display: none;
+    }
+    &__buttons {
+      gap: 10px;
+      .button {
+        font-size: 10px;
+        color: #220f09;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    &__link{
+      font-size: 11px;
+    }
+    &__buttons {
+      gap: 10px;
+      .button {
+        font-size: 8px;
+        color: #220f09;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
 </style>

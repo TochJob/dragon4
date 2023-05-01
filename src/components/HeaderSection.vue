@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  props:['title', 'desc']
+  props: ["title", "desc"],
 };
 </script>
 <style lang="scss" scoped>
@@ -31,6 +31,33 @@ export default {
     font-size: 15px;
     line-height: 22px;
     color: #ffffff;
+  }
+}
+@media screen and (max-width: 992px) {
+  .section {
+    &__heading {
+      font-size: 30px;
+      padding: 30px 0 15px;
+    }
+    &__paragraph {
+      font-size: 15px;
+      max-width: none;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .section {
+    &__heading {
+      font-size: 20px;
+      padding: 20px 0 15px;
+    }
+    &__paragraph {
+      font-size: 10px;
+      max-width: none;
+    }
   }
 }
 </style>

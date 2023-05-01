@@ -59,4 +59,47 @@ export default {
     
   }
 }
+
+
+@media screen and (max-width:992px) {
+  .referal{
+    &__form{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__input{
+      width: 60%;
+      margin-right: 0;
+      min-width: auto;
+    }
+  }
+  .a{
+    &-button{
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .referal{
+    img{
+      width: 40%;
+    }
+    &__title{
+      font-size: 23px;
+    }
+    &__input{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &__form{
+      flex-direction: column;
+    }
+    .a-button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
 </style>
