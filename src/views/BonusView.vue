@@ -1,9 +1,7 @@
 <template>
   <section class="bonus">
-    <HeaderSection
-      title="Драгон Мани"
-      desc="Драгон Мани — онлайн стратегия с уникальными играми! Краш, нвути, рулетка, дабл, монополия и другие игры! Ежедневные бонусы и праздничные события! Попробуй и получи бесплатный бонус 🔥 Официальный сайт"
-    />
+    <HeaderSection title="Драгон Мани"
+      desc="Драгон Мани — онлайн стратегия с уникальными играми! Краш, нвути, рулетка, дабл, монополия и другие игры! Ежедневные бонусы и праздничные события! Попробуй и получи бесплатный бонус 🔥 Официальный сайт" />
     <div class="wrapper bonus__wrapper">
       <a href="" class="button bonus__button">Регистрация</a>
       <div class="column info" v-for="(item, index) of infoList" :key="index">
@@ -18,13 +16,8 @@
       </a>
     </div>
     <div class="column bonus__desc">
-      <DescriptionBonus
-        class="bonus__desc-item"
-        v-for="(item, index) of descList"
-        :key="index"
-        :title="item.title"
-        :text="item.text"
-      />
+      <DescriptionBonus class="bonus__desc-item" v-for="(item, index) of descList" :key="index" :title="item.title"
+        :text="item.text" />
     </div>
     <HelpSection />
     <a href="" class="button bonus__button bonus__reg">Получить 50 монет за регистрацию!</a>
@@ -47,16 +40,8 @@
     </div>
     <h2 class="bonus__title">События</h2>
     <div class="wrapper bonus__events">
-      <BEvent
-        class="bonus__event"
-        v-for="(item, index) of events"
-        :key="index"
-        :title="item.title"
-        :text="item.text"
-        :img="item.img"
-        :coins="item.coins"
-        :color="item.color"
-      />
+      <BEvent class="bonus__event" v-for="(item, index) of events" :key="index" :title="item.title" :text="item.text"
+        :img="item.img" :coins="item.coins" :color="item.color" />
     </div>
     <h2 class="bonus__title">Реферальный бонус</h2>
     <BReferal />
@@ -172,11 +157,17 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &__attention {
+    align-items: flex-end;
+  }
+
   &__wrapper {
     align-items: center;
     gap: 60px;
     margin: 30px 0 52px;
   }
+
   &__button {
     font-family: "Arial";
     font-weight: 700;
@@ -187,12 +178,15 @@ export default {
     border-radius: 8px;
     padding: 0 20px;
   }
+
   &__desc {
     margin: 40px 0;
+
     &-item {
       margin-bottom: 22px;
     }
   }
+
   &__title {
     align-self: flex-start;
     font-family: "Montserrat";
@@ -201,10 +195,12 @@ export default {
     line-height: 37px;
     color: #ffffff;
   }
+
   &__reg {
     display: inline-block;
     margin: 40px 0;
   }
+
   &__text {
     font-family: "Montserrat";
     font-weight: 500;
@@ -213,29 +209,36 @@ export default {
     color: #ffffff;
     align-self: flex-start;
   }
+
   &__attention {
     margin: 15px 0 40px;
   }
+
   &__coins {
     margin: 6px 0 24px;
     width: 100%;
     justify-content: space-between;
   }
+
   &__weekly {
     margin-bottom: 46px;
   }
+
   &__banners {
     width: 100%;
+
     &-image {
       width: 100%;
     }
   }
+
   &__events {
     gap: 40px;
     align-self: flex-start;
     margin: 40px 0;
   }
 }
+
 .info {
   &__title {
     font-weight: 300;
@@ -244,6 +247,7 @@ export default {
     line-height: 30px;
     color: #ffffff;
   }
+
   &__data {
     font-weight: 700;
     font-family: "Montserrat";
@@ -255,6 +259,7 @@ export default {
 
 .chapter {
   align-self: flex-start;
+
   &__title {
     font-family: "Montserrat";
     font-weight: 700;
@@ -274,13 +279,74 @@ export default {
       }
     }
   }
-  .bonus{
-    &__events{
+
+  .bonus {
+    &__events {
       flex-direction: column;
     }
-    &__text{
+
+    &__text {
       font-size: 13px;
       line-height: 240%;
+    }
+  }
+}
+
+@media screen and (max-width:576px) {
+  .bonus {
+    &__desc {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      line-height: 150%;
+    }
+
+    &__coins {
+      &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  }
+}
+@media screen and (max-width:480px) {
+  .bonus{
+    &__wrapper{
+      flex-direction: column-reverse;
+      gap: 10px;
+      margin: 20px 0 ;
+    }
+    &__title{
+      font-size: 16px;
+      line-height: 150%;
+    }
+    &__reg{
+      font-size: 11px;
+      margin: 25px 0;
+    }
+    &__coins{
+      flex-direction: column;
+      gap: 25px;
+      &-item{
+        gap: 10px;
+      }
+    }
+  }
+  .chapter{
+    &__title{
+      margin-left: 0;
+      font-size: 15px;
+    }
+  }
+  .info{
+    text-align: center;
+    &__title{
+      font-size: 13px;
+    }
+    &__data{
+      font-size: 11px;
     }
   }
 }

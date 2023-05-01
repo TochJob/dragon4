@@ -102,4 +102,27 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:480px) {
+  .referal{
+    flex-direction: column;
+
+    &__title{
+      font-size: 13px;
+    }
+    &__text{
+      font-size: 11px;
+      line-height: 150%;
+    }
+    &__input{
+      font-size: 11px;
+      &::placeholder{
+        font-size: 11px;
+      }
+    }
+    .a-button{
+      font-size: 12px;
+    }
+  }
+}
 </style>

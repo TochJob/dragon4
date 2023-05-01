@@ -1,6 +1,6 @@
 <template>
   <div class="event wrapper" :style="{ background: color }">
-    <img :src="img" alt="event" />
+    <img :src="img" alt="event" class="event__icon" />
     <div class="event__box">
       <h5 class="event__title">{{ title }}</h5>
       <p class="event__text">{{ text }}</p>
@@ -70,6 +70,41 @@ export default {
   }
   &__box{
     margin-left: 20px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .event{
+    &__icon{
+      height: 100px;
+    }
+    &__coin{
+      height: auto;
+    }
+    &__title{
+      font-size: 15px;
+    }
+    &__text{
+      margin-bottom: 5px;
+      font-size: 11px;
+    }
+    &__button{
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  .event{
+    &__icon{
+      display: none;
+    }
+    &__button{
+      font-size: 12px;
+    }
+    &__text{
+      line-height: 150%;
+    }
   }
 }
 </style>

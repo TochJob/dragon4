@@ -52,4 +52,18 @@ export default {
     color: #ffffffbd;
   }
 }
+
+@media screen and (max-width:576px) {
+  .help{
+    &__text{
+      font-size: 11px;
+      line-height: 150%;
+    }
+    &__list{
+      &-item{
+        margin-left: 20px;
+      }
+    }
+  }
+}
 </style>

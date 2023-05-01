@@ -78,4 +78,15 @@ export default {
     }
   }
 }
+
+@media screen and (max-width:768px) {
+  .attention{
+    &__title{
+      font-size: 9px;
+      line-height: 150%;
+      margin-bottom: 10px;  
+    }
+   
+  }
+}
 </style>

@@ -34,4 +34,26 @@ export default {
     color: #ffffff96;
   }
 }
+
+@media screen and (max-width:576px) {
+  .description{
+    &__title{
+      font-size: 16px;
+      margin-bottom: 0; 
+    }
+    &__text{
+      font-size: 11px;
+      line-height: 150%;
+    }
+  }
+}
+@media screen and (max-width:480px) {
+  .description{
+    &__title{
+      line-height: 150%;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+  }
+}
 </style>
